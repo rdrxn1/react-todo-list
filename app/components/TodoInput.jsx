@@ -6,7 +6,6 @@ import '@/app/index.css';
 
 export default function TodoInput(props) {
     const { handleAddTodos, todoValue, setTodoValue } = props
-    const [todoValue, setTodoValue] = useState('')
     const buttonRef = useRef(null);
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {

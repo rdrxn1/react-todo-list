@@ -9,9 +9,8 @@ export default function Page() {
 const [todos, setTodos] = useState([])
 const [todoValue, setTodoValue] = useState('')
 
-function PersistData() {
-  localStorage.setItem('todos', JSON.stringify({todos:
-  newList }))
+function persistData(newList) {
+  localStorage.setItem('todos', JSON.stringify({todos: newList }))
 }
 
 
@@ -55,6 +54,7 @@ useEffect(() => {
     <>
       <TodoInput todoValue = {todoValue} setTodoValue = {setTodoValue} handleAddTodos = {handleAddTodos}/>
       <TodoList 
+      handleEditTodos={handleEditTodos}
       handleDeleteTodos={handleDeleteTodos}
       todos = {todos}
       />
