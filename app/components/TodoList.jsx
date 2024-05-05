@@ -7,11 +7,11 @@ export default function TodoList(props) {
     const { todos } = props
 
     return (
-        <ul className='main'>
+        <ul className='flex flex-col gap-4 max-w-screen-md w-full mx-auto'>
             {todos.map((todo, todoIndex) => {
                 return(
                     <TodoCard {...props} key={todoIndex} index={todoIndex}>
-                        <p className='bg-white'>
+                        <p>
                             {todo}
                         </p>
                     </TodoCard>
