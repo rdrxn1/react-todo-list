@@ -17,6 +17,7 @@ module.exports = {
         mainbkgcolor: "hsl(var(--color-mainbkgcolor) / <alpha-value>)",
         bkgcolor: "hsl(var(--color-bkgcolor) / <alpha-value>)",
         txtcolor: 'hsl(var(--color-txtcolor) / <alpha-value>)',
+        buttonnaccent: 'hsl(var(--color-buttonnaccent) / <alpha-value>)',
       },
   },
   },
