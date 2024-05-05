@@ -17,9 +17,9 @@ export default function TodoInput(props) {
         <input value={todoValue}
                onChange={(e) => setTodoValue(e.target.value)}
                onKeyDown={handleKeyDown}
-               className={`${press2P.className} bg-bkgcolor text-txtcolor mb-8 mt-5 py-3 pr-4 pl-6 w-full outline-none rounded-3xl placeholder-txtcolor placeholder-opacity-25`} placeholder="Enter todo..."/>
+               className={`bg-bkgcolor text-txtcolor text-lg mb-8 mt-5 py-3 pr-4 pl-6 w-full outline-none rounded-3xl placeholder-txtcolor placeholder-opacity-40`} placeholder="Enter todo..."/>
        <button ref={buttonRef} 
-               className={`${press2P.className} bg-bkgcolor text-txtcolor mb-8 mt-5 py-3 pr-3.5 pl-4 rounded-3xl transition-opacity duration-200 hover:opacity-70`} 
+               className={`bg-bkgcolor text-txtcolor mb-8 mt-5 py-3 pr-3.5 pl-4 rounded-3xl transition-opacity duration-200 hover:opacity-80`} 
                onClick={()=>{
                 if(todoValue !== '') {
                handleAddTodos(todoValue)
