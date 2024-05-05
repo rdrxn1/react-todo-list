@@ -4,21 +4,24 @@
 
 @layer base {
   :root {
-    --color-mainbkgcolor: 240deg 3% 8%;
-    --color-bkgcolor: 210deg 3% 12%;
+    --color-mainbkgcolor: 221deg 26% 6%;
+    --color-bkgcolor: 223deg 26% 10%;
     --color-txtcolor: 215deg 28% 91%;
+    --color-buttonnaccent: 82deg 99% 70%;
   }
   }
 
   [data-theme="dark"] {
-    --color-mainbkgcolor: 240deg 3% 8%;
-    --color-bkgcolor: 210deg 3% 12%;
+    --color-mainbkgcolor: 221deg 26% 6%;
+    --color-bkgcolor: 223deg 26% 10%;
     --color-txtcolor: 30deg 100% 100%;
+    --color-buttonnaccent: 82deg 99% 70%;
   }
   [data-theme="light"] {
-    --color-bkgcolor: 30deg 100% 100%;
-    --color-mainbkgcolor: 216deg 40% 94%;
+    --color-bkgcolor: 218deg 100% 92%;
+    --color-mainbkgcolor: 223deg 30% 53%;
     --color-txtcolor: 210deg 3% 12%;
+    --color-buttonnaccent: 82deg 99% 70%;
   }
 
   .todoItem {
