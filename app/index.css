@@ -2,15 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bkgcolor: 218deg 100% 92%;
+    --color-mainbkgcolor: 223deg 30% 53%;
+    --color-txtcolor: 210deg 3% 12%;
+    --color-buttonnaccent: 82deg 99% 70%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
   :root {
     --color-mainbkgcolor: 221deg 26% 6%;
     --color-bkgcolor: 223deg 26% 10%;
     --color-txtcolor: 215deg 28% 91%;
     --color-buttonnaccent: 82deg 99% 70%;
   }
-  }
-
+}
   [data-theme="dark"] {
     --color-mainbkgcolor: 221deg 26% 6%;
     --color-bkgcolor: 223deg 26% 10%;
@@ -23,7 +31,6 @@
     --color-txtcolor: 210deg 3% 12%;
     --color-buttonnaccent: 82deg 99% 70%;
   }
-
   .todoItem {
     display: flex;
     align-items: center;
