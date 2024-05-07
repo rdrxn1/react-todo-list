@@ -1,14 +1,21 @@
 import { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenToSquare, faTrashCan } from '@fortawesome/free-regular-svg-icons'
+import { FaRegCopy } from "react-icons/fa";
 
 export default function TodoCard(props) {
-  const {children, handleDeleteTodos, index, handleEditTodos} = props
+  const {children, handleDeleteTodos, index, handleEditTodos, handleCopyTodos} = props
   return (
-    <li className='todoItem bg-bkgcolor text-txtcolor'>
+    <li className='todoItem bg-bkgcolorlight dark:bg-bkgcolor text-txtcolorlight dark:text-txtcolor'>
         {children}
         <div 
-        className = 'actionsContainer bg-bkgcolor'>
+        className = 'actionsContainer bg-bkgcolorlight dark:bg-bkgcolor'>
+          <button
+            onClick={() => {
+              handleCopyTodos(index)
+            }}>
+            <FaRegCopy className='bg-transparent drop-shadow'/>
+          </button>
         <button
         onClick={() => {
           handleEditTodos(index)

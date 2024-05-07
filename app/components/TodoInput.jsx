@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useRef } from 'react';
-import { press2P } from '@/app/ui/fonts';
+import { useTheme } from 'next-themes'
+import DarkModeToggle from './DarkMode.jsx'; 
 import '@/app/index.css';
 
 
 export default function TodoInput(props) {
-    const { handleAddTodos, todoValue, setTodoValue } = props
+    const { handleAddTodos, todoValue, setTodoValue, toggleTheme } = props
     const buttonRef = useRef(null);
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
@@ -13,13 +14,14 @@ export default function TodoInput(props) {
         }
       };
   return (
-    <div    className='flex items-stretch max-w-screen-md w-full mx-auto gap-3.5'>
+    <div className='mr-3.5 ml-3.5'>
+    <div    className='flex items-stretch max-w-screen-md mx-auto gap-3.5'>
         <input value={todoValue}
                onChange={(e) => setTodoValue(e.target.value)}
                onKeyDown={handleKeyDown}
-               className={`bg-bkgcolor text-txtcolor text-2xl mb-8 mt-5 py-3 pr-4 pl-6 w-full outline-none rounded-3xl placeholder-txtcolor placeholder-opacity-40`} placeholder="Enter todo..."/>
+               className={`bg-bkgcolorlight dark:bg-bkgcolor text-txtcolorlight dark:text-txtcolor text-2xl mb-8 mt-5 py-3 pr-4 pl-6 w-full outline-none rounded-3xl placeholder-txtcolorlight dark:placeholder-txtcolor placeholder-opacity-60 dark:placeholder-opacity-30`} placeholder="Enter todo..."/>
        <button ref={buttonRef} 
-               className={`bg-bkgcolor text-txtcolor text-2xl mb-8 mt-5 py-3 pr-3.5 pl-4 rounded-3xl transition-opacity duration-200 hover:opacity-80`} 
+               className={`bg-bkgcolorlight dark:bg-bkgcolor text-txtcolorlight dark:text-txtcolor text-2xl mb-8 mt-5 py-3 pr-3.5 pl-4 rounded-3xl transition-opacity duration-200 hover:opacity-80`} 
                onClick={()=>{
                 if(todoValue !== '') {
                handleAddTodos(todoValue)
@@ -28,6 +30,8 @@ export default function TodoInput(props) {
        }}>
                Add
        </button>
+       <DarkModeToggle/>
+    </div>
     </div>
   );
 }

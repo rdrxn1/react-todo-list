@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'selector',
+  darkMode: 'class',
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,10 +14,13 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        mainbkgcolor: "hsl(var(--color-mainbkgcolor) / <alpha-value>)",
-        bkgcolor: "hsl(var(--color-bkgcolor) / <alpha-value>)",
-        txtcolor: 'hsl(var(--color-txtcolor) / <alpha-value>)',
-        buttonnaccent: 'hsl(var(--color-buttonnaccent) / <alpha-value>)',
+        'mainbkgcolor': '#0C0E13',
+        'mainbkgcolorlight': '#6378AB',
+        'bkgcolor': '#131720',
+        'bkgcolorlight': '#D6E5FF',
+        'txtcolor': '#FFFFFF',
+        'txtcolorlight': '#1E1F1F',
+        'buttonnaccent': '#FFD700',
       },
   },
   },

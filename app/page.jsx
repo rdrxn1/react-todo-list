@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
-import SVGButton from "./components/DarkMode.jsx";
 import '@/app/index.css'
 
 export default function Page() {
@@ -31,6 +30,11 @@ export default function Page() {
         handleDeleteTodos(index);
     }
 
+    function handleCopyTodos(index) {
+        const todo = todos[index];
+        window.navigator.clipboard.writeText(todo);
+    }
+
     useEffect(() => {
         if (!localStorage) {
             return;
@@ -51,6 +55,7 @@ export default function Page() {
             <TodoList
                 handleEditTodos={handleEditTodos}
                 handleDeleteTodos={handleDeleteTodos}
+                handleCopyTodos={handleCopyTodos}
                 todos={todos}
             />
         </div>
