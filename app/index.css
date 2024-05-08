@@ -1,35 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-
-  .todoItem {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 14px;
-    border-radius: 20px;
-  }
-  
-  .todoItem p {
-    flex: 1;
-  }
-  
-  .actionsContainer {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-  
-  .actionsContainer button {
-    transition-duration: 200ms;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-  }
-  
-  .actionsContainer button:hover {
-    opacity: 0.7;
-  }
-  
