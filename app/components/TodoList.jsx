@@ -8,7 +8,7 @@ export default function TodoList(props) {
 
     return (
         <div className='mx-3.5'>
-        <ul className='flex flex-col gap-4 max-w-screen-md w-full mx-auto'>
+        <ul className='flex flex-col gap-0 max-w-screen-md w-full mx-auto'>
             {todos.map((todo, todoIndex) => {
                 return(
                     <TodoCard {...props} key={todoIndex} index={todoIndex}>
